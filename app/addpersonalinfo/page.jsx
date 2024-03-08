@@ -21,7 +21,7 @@ export default function AddPersonalInfo() {
     if (Object.keys(validation).length === 0) { 
       try {
         console.log(personalInfo)
-        const response = await fetch('https://manageuserinfo-4.onrender.com/api/personalinfo', {
+        const response = await fetch('https://userinfomanage.onrender.com/api/personalinfo', {
           method: 'POST',
           body: JSON.stringify(personalInfo),
           headers: { 'content-type': 'application/json' }
