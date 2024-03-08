@@ -150,9 +150,9 @@ export default function Home() {
     {
          Array.isArray(userData) && userData.length>0 &&
           (userData.map((data,index)=>(
-            <div className="bg-white space-y-3 p-4 rounded-lg shadow">
-            <div className="flex items-center space-x-2 text-sm">
-              <div key={data._id}>
+            <div key={data._id} className="bg-white space-y-3 p-4 rounded-lg shadow">
+            <div key={index} className="flex items-center space-x-2 text-sm">
+              <div >
               <input 
             type="checkbox" 
             className="font-bold text-blue-500 hover:underline" 
