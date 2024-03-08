@@ -66,7 +66,7 @@ export default function UpdatePersonalInfo() {
       }
     }
     updatedata();
-},[_id])
+},[id])
   
   const  handleCancel=(e)=>{
     e.preventDefault();
