@@ -22,7 +22,7 @@ export default function UpdatePersonalInfo() {
     if (Object.keys(validation).length === 0) { 
       
         try {
-          const response = await fetch(`https://manageuserinfo-4.onrender.com/api/updateinfo/${id}`,{
+          const response = await fetch(`https://userinfomanage.onrender.com/api/updateinfo/${id}`,{
             method:'PUT',
             body:JSON.stringify(personalInfo),
             headers:{'content-type':'application/json'}
@@ -55,7 +55,7 @@ export default function UpdatePersonalInfo() {
     const updatedata=async()=>{
       try {
         console.log(personalInfo)
-        const response = await fetch(`https://manageuserinfo-4.onrender.com/api/personalinfo/singluser/${id}`);
+        const response = await fetch(`https://userinfomanage.onrender.com/api/personalinfo/singluser/${id}`);
         if (response.ok) {
           const data = await response.json();
           console.log(data)
