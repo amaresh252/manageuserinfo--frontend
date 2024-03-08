@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(()=>{
     const fetchData=async()=>{
       try {
-        const response = await fetch('https://manageuserinfo-4.onrender.com/api/personalinfo');
+        const response = await fetch('https://userinfomanage.onrender.com/api/personalinfo');
         if (response.ok) {
           const data = await response.json();
           setUserData(data);
@@ -34,7 +34,7 @@ export default function Home() {
     e.preventDefault();
     console.log(_id)
     try {
-      const response = await fetch(`https://manageuserinfo-4.onrender.com/api/deleteinfo/${_id}`,{
+      const response = await fetch(`https://userinfomanage.onrender.com/api/deleteinfo/${_id}`,{
         method: "DELETE",
       });
       if (response.ok) {
@@ -57,7 +57,7 @@ export default function Home() {
   e.preventDefault();
   if(!selectedData) return ;
   try {
-    const response = await fetch('https://manageuserinfo-4.onrender.com/api/send-email', {
+    const response = await fetch('https://userinfomanage.onrender.com/api/send-email', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
